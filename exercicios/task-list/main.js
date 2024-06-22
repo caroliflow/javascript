@@ -22,12 +22,12 @@ const clearInput = () => {
 };
 
 const save = () => {
-    let tasks = mostra.querySelectorAll('li');
+    let tasks = document.querySelectorAll('li');
     const tasksArray = [];
 
-    for (let i in tasks) {
-        let taskText = tasks[i].innerText;
-        // taskText = taskText.replace('delete', '').trim();
+    for (let i of tasks) {
+        let taskText = i.innerText;
+        taskText = taskText.replace('delete', '').trim();
         tasksArray.push(taskText);
     };
 
